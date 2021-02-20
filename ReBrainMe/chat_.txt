@@ -1,0 +1,463 @@
+From Vlad to Everyone:  07:10 PM
++
+From Alexey to Everyone:  07:10 PM
++
+From Дмитрий Е to Everyone:  07:10 PM
++
+From Денис Алексеенко to Everyone:  07:10 PM
++
+From Yury Nazarov to Everyone:  07:10 PM
++
+From Plokhotnikov David to Everyone:  07:10 PM
++
+From Александр Ивлев to Everyone:  07:10 PM
++
+From Олег Тихомиров to Everyone:  07:10 PM
++
+From Владимир Павлычев to Everyone:  07:10 PM
++
+From stasyan to Everyone:  07:10 PM
++ пагнали!
+From Artem to Everyone:  07:11 PM
+А сегодня про алерт менджер пару вопросов будет?
+*слов
+From coldstone to Everyone:  07:11 PM
+о! Димон! осталось только Дениску подтянуть в Ребрейн! :)
+From Artem to Everyone:  07:11 PM
+Благодарю:3
+From Alex Berdennikov to Everyone:  07:11 PM
+алертинг нужен! добавьте в план пож-та до НГ
+From coldstone to Everyone:  07:12 PM
+Валера поправил? :)
+From Дмитрий to Everyone:  07:14 PM
+Всем привет
+From Alex Berdennikov to Everyone:  07:14 PM
+а бизнес метрики рассмотрим? кол-во сообщений например или кол-во новых регистраций
+From Evgeniy to Everyone:  07:14 PM
+не врЕменных,а временнЫх, извините.
+From Владимир Павлычев to Everyone:  07:14 PM
+салют
+From Алексей Журкин to Everyone:  07:14 PM
+А что особенного в алертинге у прометея, что ему надо отдельный вебинар посвящать? Ну его.
+From Dmitry Tsybus to Everyone:  07:15 PM
+С push gateway Prometheus тоже ходит сам
+From Владимир Павлычев to Everyone:  07:15 PM
+Так временнЫх и прозвычало
+From Алексей Журкин to Everyone:  07:16 PM
+А что не будет про перцентили, это жалько.
+From Дмитрий Гордеев to Everyone:  07:16 PM
+https://grafana.com/grafana/dashboards/6671
+From Алексей Журкин to Everyone:  07:17 PM
+А про линейный анализ будет?
+From alexandr to Everyone:  07:17 PM
+а что за ide ?
+From Artem to Everyone:  07:17 PM
+vscode
+From seventh to Everyone:  07:18 PM
+Теперь мама переживать будет
+From Дмитрий Гордеев to Everyone:  07:18 PM
+github.com/prometheus/client_golang/prometheus
+From Pavel Kiselev to Everyone:  07:19 PM
+Это то, что в node_exporter-е в начале идёт. 
+From alexandr to Everyone:  07:19 PM
+это то что node_exporter отдает прометею
+From Alex Berdennikov to Everyone:  07:20 PM
+точно node_exporter ? 
+From Алексей Журкин to Everyone:  07:21 PM
+Графана не через promql ходит, она через рест забирает.
+From Ruslan to Everyone:  07:21 PM
+Для совсем новеньких, что такое прометеус? Это агрегатор метрик? 
+From Алексей Журкин to Everyone:  07:21 PM
+там жсон
+From stasyan to Everyone:  07:21 PM
+а для 1с есть? ))
+From Zakusov Alexey to Everyone:  07:21 PM
+чем Prometheus лучше, чем, скажем, zabbix?
+Который, к слову, не только полить может, но и ждать, когда ему сами пришлют метрики.
+From psh to Everyone:  07:21 PM
+Так и не понял при чем тут телеграмм бот
+From alexandr to Everyone:  07:21 PM
+он быстрее с ацать раз
+From Aleksandr to Everyone:  07:22 PM
+гибче чем заббикс и удобнее в развертывании и настройке
+From Zakusov Alexey to Everyone:  07:22 PM
+в чем гибкость? в чем удобство?
+From Denis Danilov to Everyone:  07:22 PM
+Скиньте dashboard в json формате в репозиорий.
+From alexandr to Everyone:  07:22 PM
+забикс медленней чем прометей и графана
+From Алексей Журкин to Everyone:  07:22 PM
+Она не лучше, она другая. У заббикса свои суперфичи, у прометея свои.
+From Zakusov Alexey to Everyone:  07:22 PM
+в чем медленней? :)
+From Alex Berdennikov to Everyone:  07:23 PM
+я не оч понял в вашем случае там node_exporter работает или эти метрики из кода приложения выдаются?
+понял спасибо
+From Pavel Kiselev to Everyone:  07:23 PM
+Просто нод экспортер тоже использует ту-же библиотеку
+From Дмитрий Е to Everyone:  07:23 PM
+Заббикс больше для мониторинга железа, а прометей по большей части для мониторинга приложений
+From Zakusov Alexey to Everyone:  07:23 PM
+А какие фичи у prometheus? Кроме того, что его удобно развернуть в докере, что бы мониторить другие контейнейры?
+From ee to Everyone:  07:23 PM
+то есть в проме сайдкар висит в поде?
+From Artem to Everyone:  07:23 PM
+Есть адекватное пособие по созданию запросов для метрик в дашбордах? Для своих графиков, там все вроде и понятно, а вроде и бест практис почитать хочется
+From Zakusov Alexey to Everyone:  07:23 PM
+>Заббикс больше для мониторинга железа, а прометей по большей части для мониторинга приложений
+From Evgeniy to Everyone:  07:23 PM
+с Алексеем согласен. сравнивать заббикс и графану это все равно что сравнивать AC/DC и Led Zeppelin
+From Zakusov Alexey to Everyone:  07:25 PM
+А в чем разница?
+То, что он пуллит - это вообще не всегда хорошо.
+Вопрос не про графану - тут все плюсы понятны.
+И минусы тоже.
+Но графана может вполне успешно интегрироваться и elastic stack и с mysql напрямую и c oracle и с тем же zabbix.
+From Pavel Kiselev to Everyone:  07:25 PM
+https://dataenginer.ru/?p=1454
+From Дмитрий Е to Everyone:  07:26 PM
+одно из различий между заббиксом и прометеем это потребление ресурсов системы, к примеру нагруженный заббикс потребляет много, а прометей гараздо меньше так как написан на go по большей части
+From Pavel Kiselev to Everyone:  07:26 PM
+Prometheus vs. Grafana vs. Graphite. Обзор Возможностей.
+From zhura to Everyone:  07:26 PM
+блин почему сразу не сказали что вебинар для программеров. зачем я вообще сюда регился...
+From ee to Everyone:  07:26 PM
+а тот же забикс вполне успешно собирает метрики и с субд, и с джава-прилок
+From Zakusov Alexey to Everyone:  07:27 PM
+>а тот же забикс вполне успешно собирает метрики и с субд, и с джава-прилок
++
+From Pavel Kiselev to Everyone:  07:27 PM
+Прометей тоже умеет. 
+From Artem to Everyone:  07:27 PM
+>почему не сказали что кода много
+К сожалению, сейчас чтобы грамотно работать с инфраструктурой, придется изучать iaac - кодить тоже надо уметь
+From ee to Everyone:  07:28 PM
+> к примеру нагруженный заббикс потребляет много, а прометей гараздо меньше так как написан на go по большей части
+забикс на чистых сях написан
+From Zakusov Alexey to Everyone:  07:28 PM
+да и формулировка “много” и “меньше” весьма размыта
+From ee to Everyone:  07:28 PM
+качество кода - это уже другой вопрос)
+From Zakusov Alexey to Everyone:  07:29 PM
+пока каких-то плюсов, кроме удобства развертывания в контейнерах и кубернетис кластерах особых не вижу
+From Алексей Журкин to Everyone:  07:29 PM
+Ну справедливости ради надо сказать, что можно обойтись башем, если в питон и го углубляться неохота. Так что в целом не так уж важно, на чем вы пишите. Важно, что вы собираете и нужен ли для этого прометей.
+From Zakusov Alexey to Everyone:  07:29 PM
+в конце концов, есть elasticsearch + beats + kibana
+From master to Everyone:  07:29 PM
++
+From ee to Everyone:  07:29 PM
+в том же опеншифте пром из коробки
++
+From Pavel Kiselev to Everyone:  07:29 PM
++
+From dimtry to Everyone:  07:29 PM
++
+From Vlad to Everyone:  07:30 PM
++
+From Владимир Павлычев to Everyone:  07:30 PM
++
+From Олег Тихомиров to Everyone:  07:30 PM
++
+From Alex Berdennikov to Everyone:  07:30 PM
+покажите пож-та как дергать руками метрики - как это выглядит в браузере
+From ee to Everyone:  07:30 PM
+> в том же опеншифте пром из коробки
+вот и удобство, система мониоринга уже есть
+From Виктор to Everyone:  07:31 PM
+всем привет
+From Alex Berdennikov to Everyone:  07:32 PM
+если можно пару слов в конце про глубину хранения и что лучше на сегодня подключить для ее увеличения influx или что-то другое
+From Pavel Kiselev to Everyone:  07:33 PM
+Сделай одного размера панели. Чувство прекрасного страдает!
++
+From Artem to Everyone:  07:33 PM
++
+From Alex Berdennikov to Everyone:  07:33 PM
++
+From Александр Ивлев to Everyone:  07:33 PM
++
+From Plokhotnikov David to Everyone:  07:33 PM
++
+From Владимир Павлычев to Everyone:  07:33 PM
++
+From Олег Тихомиров to Everyone:  07:33 PM
++
+From stasyan to Everyone:  07:33 PM
+в панели есть настройки decimal, можно дроби отбросить )
+From ALEX to Everyone:  07:33 PM
++
+From Pavel Kiselev to Everyone:  07:34 PM
+А что за обвязка вокруг докера?
+From Artem to Everyone:  07:35 PM
+Приложение для мака. Нечто похожее у винды
+From Alex Berdennikov to Everyone:  07:35 PM
+сейчас будет 3 по идее на графике
+From Алексей to Everyone:  07:35 PM
+я только подключился, а postgre мониторить графаной будем?
+From Алексей Журкин to Everyone:  07:36 PM
+Насколько на перформанс влияет обработка внутри сервиса и выдача для прометея? Есть ли другие варианты, не задействуя код приложения?
+From Pavel Kiselev to Everyone:  07:37 PM
+Можно использовать внешние экспортеры. Но влияет не сильно.
+From master to Everyone:  07:37 PM
+экспорт в csv?
+From Alex Berdennikov to Everyone:  07:37 PM
+вопрос про глубину хранения выше
+From root149 to Everyone:  07:37 PM
+а почему мак? а не линукс???
+From eugene to Everyone:  07:37 PM
+а где исходники забрать ?
+From viktor to Everyone:  07:37 PM
+Спасибо захотелось самому всё потрогать теперь, выглядит несложно))
+From Vlad to Everyone:  07:37 PM
+Всем привет
+From Олег to Everyone:  07:37 PM
+да, ссылочку
+From Zakusov Alexey to Everyone:  07:38 PM
+>есть ли другие варианты, не задействуя >код приложения?
+Можно логи парсить.
+From Алексей Журкин to Everyone:  07:38 PM
+И может ли влиять это на то, что приложение упадет из-за кривого кода при съеме метрик?
+From Tarlan Isaev to Everyone:  07:38 PM
+Дмитрий, а ты юзаешь Терраформ, что бы автодеплоить?)
+From Evgeniy to Everyone:  07:38 PM
+Вопросов хотите? Извольте: сколько коньяка нужно добавлять в кофе чтобы утро было добрым?
+From dimtry to Everyone:  07:38 PM
+Пробовали прикручивать prometeus к grpc?
+From MG to Everyone:  07:38 PM
+а как может прометеус динамически конфигурироваться?
+From Artem to Everyone:  07:38 PM
+Наоборот, утро именно становится добрым благодаря кофе и коньяку :3
+From stasyan to Everyone:  07:38 PM
+умер
+From Владимир Павлычев to Everyone:  07:38 PM
+Звук беда
+From Андрей Чалмаев to Everyone:  07:38 PM
+оопс
+From MG to Everyone:  07:38 PM
+а то .. немного напрягает приседания с поставкой конфига
+From Alex Berdennikov to Everyone:  07:38 PM
+можно наверное мониторить записи в таблице каким-то экспортером - в обход приложения если
+From master to Everyone:  07:38 PM
+звук
+From Maxim Sablev to Everyone:  07:38 PM
+звук
+From Evgeniy to Everyone:  07:39 PM
+а что насчет графана-локи?
+From Alex K to Everyone:  07:39 PM
+зависло
+From Владимир Павлычев to Everyone:  07:39 PM
+фрииз
+From Евгений to Everyone:  07:39 PM
+----------------
+From Pavel Kiselev to Everyone:  07:39 PM
+Для логов не плохо Grafana Loki работает. 
+From Андрей Чалмаев to Everyone:  07:39 PM
+видео вырубите!
+From Александр Ивлев to Everyone:  07:39 PM
+всё висит
+From Maxim Sablev to Everyone:  07:39 PM
+Товарищи, а была ли ссылка на репозиторий?
+From ictID to Everyone:  07:39 PM
+пропал
+From Zakusov Alexey to Everyone:  07:39 PM
+>можно наверное мониторить записи в >таблице каким-то экспортером - в обход >приложения если
+From Олег to Everyone:  07:39 PM
+WiFi перегружен. Соседи вернулись?
+From Zakusov Alexey to Everyone:  07:39 PM
+Зачем тогда вообще прометей? :)
+Графана может сразу из базы.
+From Олег to Everyone:  07:40 PM
+Почему никто кабелем не пользуется?
+From Vasiliy Ozerov to Everyone:  07:40 PM
+Запись - https://lk.rebrainme.com/
+В разделе Golang
+
+Golang - https://rebrainme.com/golang/
+DevOps  - https://rebrainme.com/devops/
+Docker - https://rebrainme.com/docker/
+Kubernetes - https://rebrainme.com/kubernetes/
+HighLoad - https://rebrainme.com/highload/
+Linux - https://rebrainme.com/linux/
+
+По всем вопросам - @ilya_rebrain
+Запись - https://lk.rebrainme.com/
+В разделе Golang
+
+Golang - https://rebrainme.com/golang/
+DevOps  - https://rebrainme.com/devops/
+Docker - https://rebrainme.com/docker/
+Kubernetes - https://rebrainme.com/kubernetes/
+HighLoad - https://rebrainme.com/highload/
+Linux - https://rebrainme.com/linux/
+
+По всем вопросам - @ilya_rebrain
+Запись - https://lk.rebrainme.com/
+В разделе Golang
+
+Golang - https://rebrainme.com/golang/
+DevOps  - https://rebrainme.com/devops/
+Docker - https://rebrainme.com/docker/
+Kubernetes - https://rebrainme.com/kubernetes/
+HighLoad - https://rebrainme.com/highload/
+Linux - https://rebrainme.com/linux/
+
+По всем вопросам - @ilya_rebrain
+From eugene to Everyone:  07:40 PM
+https://gitlab.rebrainme.com/webinars/telegram-bot
+From Марат to Everyone:  07:40 PM
+пять раз надо
+From Maxim Sablev to Everyone:  07:40 PM
+> https://gitlab.rebrainme.com/webinars/telegram-bot
+
+Спасибо!
+
+From Vasiliy Ozerov to Everyone:  07:41 PM
+Запись - https://lk.rebrainme.com/
+В разделе Golang
+
+Golang - https://rebrainme.com/golang/
+DevOps  - https://rebrainme.com/devops/
+Docker - https://rebrainme.com/docker/
+Kubernetes - https://rebrainme.com/kubernetes/
+HighLoad - https://rebrainme.com/highload/
+Linux - https://rebrainme.com/linux/
+
+По всем вопросам - @ilya_rebrain
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+From Андрей to Everyone:  07:41 PM
+Спасибо!
+From Vasiliy Ozerov to Everyone:  07:41 PM
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+м
+From Алексей Журкин to Everyone:  07:41 PM
+Прометей это и есть база.
+From Evgeniy to Everyone:  07:42 PM
+кабелем в маке? это с переходником который в традициях огрызка стоит 49,99?
+не рублей
+From Александр Ивлев to Everyone:  07:42 PM
++
+From Plokhotnikov David to Everyone:  07:42 PM
+++
+From Pavel Kiselev to Everyone:  07:42 PM
++
+From Artem to Everyone:  07:42 PM
++
+From dimtry to Everyone:  07:42 PM
++
+From Анатолий to Everyone:  07:42 PM
++
+From Алексей Журкин to Everyone:  07:42 PM
+Я имел в виду, архитектурно какие еще варианты снять метрики с приложения, не отдавая их из приложения?
+From Pavel Kiselev to Everyone:  07:42 PM
+Логи либо эндпоинт
+From Марат to Everyone:  07:43 PM
+о, новые тесты сделали)
+From Artem to Everyone:  07:43 PM
+Логи можно также парсить - syslog, filebeat и т.д.
+Просто порой удобнее через rest запросы
+From Evgeniy to Everyone:  07:43 PM
+ну какие нафиг метрики с приложения не отдавая из приложения? разве что сколько это самое приложение отжирает по ресурсам, остальное - только то что отдается.
+From Алексей Журкин to Everyone:  07:45 PM
+Архитектурно.)
+From Zakusov Alexey to Everyone:  07:45 PM
+Я имел в виду, архитектурно какие еще варианты снять метрики с приложения, не отдавая их из приложения? —> складывать во внешнее хранилище и забирать оттуда
+проще всего - в текстовый лог и парсить его
+From Алексей Журкин to Everyone:  07:45 PM
+Как вариант. Но прометей и есть хранилище.
+From Zakusov Alexey to Everyone:  07:45 PM
+Ну да, просто, спрашивали, что кроме прометея :)
+From Алексей Журкин to Everyone:  07:45 PM
+Я понял. Спасибо.
+From Pavel Kiselev to Everyone:  07:46 PM
+Проще наверное в логи тогда. Можно и человеком почитать. 
+Удобнее, и в одном месте
+From Zakusov Alexey to Everyone:  07:46 PM
+ну какие нафиг метрики с приложения не отдавая из приложения —> бизнес метрики, например
+From master to Everyone:  07:46 PM
+вебинар все или еще будет?
+From Zakusov Alexey to Everyone:  07:46 PM
+обычно, не только memory leaks мониторить нужно
+From Evgeniy to Everyone:  07:46 PM
+будут ответы на вопросы
+From stasyan to Everyone:  07:46 PM
+можно пулять в бд
+графана умеет читать ото всюду
+From Vasiliy Ozerov to Everyone:  07:49 PM
+уже стартанул)
+From Дмитрий Гордеев to Everyone:  07:53 PM
+https://gitlab.rebrainme.com/webinars/telegram-bot
+https://gitlab.rebrainme.com/webinars/telegram-bot
+https://gitlab.rebrainme.com/webinars/telegram-bot
+From Viktor to Everyone:  07:54 PM
+Ветки пока еще нет
+From Serge to Everyone:  07:55 PM
+В docker-compose.yml не увидел прометеус и графану - они отдельно?
+From Zakusov Alexey to Everyone:  07:55 PM
+инкапсулируется в логику приложения - это не гибко, заберешь только то, что дали
+From Evgeniy to Everyone:  07:55 PM
+насчет логов хочу вопрос повторить: что насчет графана локи?
+From Alex Berdennikov to Everyone:  07:55 PM
+для увеличения глубины хранения что лучше подключать?
+From Zakusov Alexey to Everyone:  07:55 PM
+шаг влево, шаг вправо - нет
+From Alex Berdennikov to Everyone:  07:56 PM
++14 дней хотя бы чтобы год хранилась инфа в прометеусе 
+From Evgeniy to Everyone:  07:56 PM
+ну вот и всё, походу
+From Денис Колесов to Everyone:  07:56 PM
+упс
+From stasyan to Everyone:  07:56 PM
+так и не узнаем в чем несомненный плюс
+From Evgeniy to Everyone:  07:57 PM
+спасибо за лекцию. 
+From Vasiliy Ozerov to Everyone:  07:57 PM
+@ilya_rebrain
+From Zakusov Alexey to Everyone:  07:57 PM
+да, я смотрю :D зАкусов )
+From Vasiliy Ozerov to Everyone:  07:57 PM
+https://www.piter.com/
+промокод REBRAIN на 25% скидки
+From Viktor to Everyone:  07:57 PM
+са
+From Vasiliy Ozerov to Everyone:  07:57 PM
+@ilya_rebrain
+@ilya_rebrain
+@ilya_rebrain
+From Viktor to Everyone:  07:57 PM
+Спасибо!
+From MG to Everyone:  07:59 PM
+как динамически прометеусе подгружать конфиги?
+From Сергей to Everyone:  07:59 PM
+Спасибо)
+From Zakusov Alexey to Everyone:  07:59 PM
+Спасибо!
+From Марат to Everyone:  07:59 PM
+успел тесты пройти на lk)
+From Artem to Everyone:  07:59 PM
+Пасяб)
+From MG to Everyone:  08:00 PM
+как динамически прометеусе подгружать конфиги?
+From Serge to Everyone:  08:00 PM
+пасибо
+From Artem to Everyone:  08:00 PM
+Он просто опрашивает экспортеров и все
+From MG to Everyone:  08:00 PM
+нашел только для консула
+From Vasiliy Ozerov to Everyone:  08:00 PM
+https://forms.gle/Vc2fKBAyBKv5gVnt6
+https://forms.gle/Vc2fKBAyBKv5gVnt6
+https://forms.gle/Vc2fKBAyBKv5gVnt6
+м
+https://forms.gle/Vc2fKBAyBKv5gVnt6
+From MG to Everyone:  08:01 PM
+там есть и друге способы .. ватчинг fs
+но .. выглядит это все КРИВО
