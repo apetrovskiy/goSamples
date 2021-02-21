@@ -144,3 +144,6 @@ modules.xml
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/go,intellij+all,visualstudiocode,code
+.metals/metals.h2.db
+.metals/metals.lock.db
+.metals/metals.log
