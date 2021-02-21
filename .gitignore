@@ -24,7 +24,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
+!*.code-workspace
 
 ### Go ###
 # Binaries for programs and plugins
